@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="brand">STUDENT REGISTRATION</div>
+      <h1>Student Registration Form</h1>
+      <p class="subtitle">Please enter the details below.</p>
+
+      <form id="registrationForm">
+        <label for="name">Name <span>*</span></label>
+        <input id="name" name="name" type="text" placeholder="Enter student name"
+               maxlength="100" required>
+
+        <label for="phone">Phone Number <span>*</span></label>
+        <input id="phone" name="phone" type="tel" inputmode="numeric"
+               placeholder="Enter phone number" maxlength="15" required>
+
+        <label for="class">Class <span>*</span></label>
+        <select id="class" name="class" required>
+          <option value="">Select class</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option>
+          <option>5</option><option>6</option><option>7</option><option>8</option>
+          <option>9</option><option>10</option>
+        </select>
+
+        <label for="photo">Student Photo <span>*</span></label>
+        <input id="photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" required>
+        <small>JPG, PNG or WebP • maximum 2 MB</small>
+
+        <div id="previewWrap" class="preview-wrap hidden">
+          <img id="preview" alt="Selected photo preview">
+        </div>
+
+        <button id="submitBtn" type="submit">Submit Registration</button>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

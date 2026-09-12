@@ -1,0 +1,109 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #172033;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  padding: 34px;
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(20, 30, 60, .12);
+}
+
+.brand {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  color: #4f46e5;
+  margin-bottom: 8px;
+}
+
+h1 { margin: 0 0 8px; font-size: 30px; }
+.subtitle { margin: 0 0 26px; color: #667085; }
+
+label {
+  display: block;
+  margin: 17px 0 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+label span { color: #e11d48; }
+
+input, select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d8dee9;
+  border-radius: 11px;
+  font-size: 15px;
+  background: #fff;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,.12);
+}
+
+input[type="file"] { padding: 10px; }
+small { display: block; margin-top: 7px; color: #7a8496; }
+
+button {
+  width: 100%;
+  border: 0;
+  margin-top: 24px;
+  padding: 14px;
+  border-radius: 11px;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+button:hover { background: #4338ca; }
+button:disabled { opacity: .65; cursor: not-allowed; }
+
+.preview-wrap {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+.preview-wrap img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+}
+.hidden { display: none; }
+
+.status {
+  margin-top: 14px;
+  min-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+.status.success { color: #15803d; }
+.status.error { color: #b42318; }
+
+@media (max-width: 560px) {
+  .page { padding: 12px; }
+  .card { padding: 24px 20px; border-radius: 17px; }
+  h1 { font-size: 25px; }
+}
